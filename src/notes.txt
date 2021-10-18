@@ -1,0 +1,17 @@
+component 
+routing 
+constructor
+ngOnInit 
+
+
+how to read data from html to component? 
+how to send data from component to html? 
+
+
+ngModel -> two way data binding --> C -> V , V -> C 
+
+module -> FormsModule --> ngModel --> app.module.ts {internal external moduel / lib }
+
+all the instance variable are availabe on view page , we can print on html using interpolation 
+
+{{variableName}} => String interpolation 
