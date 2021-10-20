@@ -6,15 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  
-  firstName:String=""
-  email:String=""
-  password:String=""
-  
-  
-  user:Array<any> 
-  constructor() { 
-    this.user = [] 
+
+  firstName: String = ""
+  email: String = ""
+  password: String = ""
+
+
+  users: Array<any>
+  constructor() {
+    this.users = []
     console.log("signup component constructor");
     //
 
@@ -27,10 +27,15 @@ export class SignupComponent implements OnInit {
     //
   }
 
-  printData(){
+  printData() {
     console.log(this.firstName);
     console.log(this.email);
-    console.log(this.password);   
+    console.log(this.password);
+    let user = {firstName:this.firstName,email:this.email,password:this.password}
+    this.users.push(user); 
+    console.log(this.users);
+    localStorage.setItem("users",JSON.stringify(this.users))
+    
   }
 
 }
