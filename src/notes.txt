@@ -15,3 +15,65 @@ module -> FormsModule --> ngModel --> app.module.ts {internal external moduel / 
 all the instance variable are availabe on view page , we can print on html using interpolation 
 
 {{variableName}} => String interpolation 
+
+
+services --> class , SingleTonDesingPattern 
+            DI -> services 
+            constructor di 
+
+interface --> java bean 
+            variable declaration with data type 
+----------------------------------------------------------------------------------
+signup 
+login 
+list users -> Delete , update  
+list users -> search user -> real time 
+----------------------------------------------------------------------------------
+
+reactive-forms-module 
+
+
+reactive form 
+
+    1) FormGroup   -->  container 
+    2) FormControl -->  firstname,email,password 
+
+
+users -> 
+
+<tr *ngFor="let user of users">
+    <td>{{user.firstName}}</td>
+
+    <td><a routerLink="edituser/{{user.userId}}" >Edit</a>  </td>
+
+</tr>
+
+EditUserComponent 
+    private activatedRoute:ActivatedRoute 
+
+    let userId = this.activatedRoute.snapshot.params.userId 
+
+
+j2ee 
+${user.userId}
+
+angular 
+{{user.userId}}
+
+
+
+
+
+
+
+
+
+
+
+guard
+reactive form 
+custom validation 
+pipe 
+custom modules 
+----------------------------------------------------------------------------------
+

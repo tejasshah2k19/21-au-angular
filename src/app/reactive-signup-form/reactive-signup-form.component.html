@@ -1,0 +1,13 @@
+<h2>Reactive Signup</h2>
+
+
+<form [formGroup]="myForm"  (ngSubmit)="saveUser()">
+
+    FirstName :  <input type="text" formControlName="firstName"/>  <br>
+    LastName :<input type="text" formControlName="lastName"/>  <br>
+    Email :<input type="text" formControlName="email"/>  <br>
+    Password : <input type="text" formControlName="password"/>  <br>
+    ConfirmPassword : <input type="text" formControlName="confirmPassword"/>  <br>
+
+    <input type="submit" value="Signup"  [disabled]="myForm.valid == false" />   
+</form>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   email: string = ""
   password: string = ""
-  constructor(private tsService: ToastrService) {
+  constructor(private tsService: ToastrService,private userService:UserService) {
 
     console.log("LoginComponent cosntructor....");
 
@@ -22,7 +23,8 @@ export class LoginComponent implements OnInit {
 
   }
   authenticate() {
-    let users = JSON.parse(localStorage.getItem("users") || "")
+    // let users = JSON.parse(localStorage.getItem("users") || "")
+    let users = this.userService.users
     let isLogin = false
     for (let i = 0; i < users.length; i++) {
 
@@ -40,7 +42,7 @@ export class LoginComponent implements OnInit {
       })
     } else {
       //  alert("invalid credentials...")
-      this.tsService.error("login done", "", {
+      this.tsService.error("Invalid Credentials", "", {
         positionClass: 'toast-bottom-right',
         timeOut: 3000
       })
