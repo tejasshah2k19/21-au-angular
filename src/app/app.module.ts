@@ -12,6 +12,9 @@ import { CalcComponent } from './calc/calc.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { ReactiveSignupFormComponent } from './reactive-signup-form/reactive-signup-form.component';
+import { AddProductComponent } from './components/add-product/add-product.component';
+import { ListProductComponent } from './components/list-product/list-product.component';
+import { EditProductComponent } from './components/edit-product/edit-product.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { ReactiveSignupFormComponent } from './reactive-signup-form/reactive-sig
     HeaderComponent,
     SidebarComponent,
     CalcComponent,
-    ReactiveSignupFormComponent
+    ReactiveSignupFormComponent,
+    AddProductComponent,
+    ListProductComponent,
+    EditProductComponent
   ],
   imports: [
     BrowserModule,

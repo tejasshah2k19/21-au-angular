@@ -1,0 +1,20 @@
+<p>list-products</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>ProductId</th>
+            <th>ProductName</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.productId}}</td>
+            <td>{{product.productName}}</td>
+            <td>{{product.price}}</td>
+            <td> <a routerLink="/edit-product/{{product.productId}}">Edit</a>   | <u class="dummylink" (click)="deleteProduct(product.productId)" >  Delete </u></td>
+        </tr>
+    </tbody>
+</table>
