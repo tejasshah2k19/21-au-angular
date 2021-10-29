@@ -17,7 +17,8 @@ export class ListProductComponent implements OnInit {
 
   deleteProduct(productId:number){
     console.log("delete product Called...  "+productId);
-    this.productService.products = this.productService.products.filter(product=>product.productId != productId)   
+    this.productService.products = this.productService.products.filter(product=>product.productId != productId) 
+      
     this.products  = this.productService.products
   }
 }

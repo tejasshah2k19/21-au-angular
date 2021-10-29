@@ -9,7 +9,7 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent implements OnInit {
-
+  title="Add Product"
   productId:number=0
   price:number=0
   productName:string=""
@@ -19,7 +19,9 @@ export class AddProductComponent implements OnInit {
 
   ngOnInit(): void {
 
+    //productId => edit / no -> add 
 
+    this.title="Update product"
   }
 
   saveProduct(){

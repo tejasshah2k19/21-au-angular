@@ -3,9 +3,26 @@
 
 <form [formGroup]="myForm"  (ngSubmit)="saveUser()">
 
-    FirstName :  <input type="text" formControlName="firstName"/>  <br>
+    FirstName :  <input type="text" formControlName="firstName"/>
+<!-- 
+    <span *ngIf="myForm.get('firstName')?.dirty">Dirty</span>
+    <span *ngIf="myForm.get('firstName')?.pristine">Prestine</span>
+    <span *ngIf="myForm.get('firstName')?.touched">Touched</span>
+     -->
+     <span class="error" *ngIf="myForm.get('firstName')?.touched && myForm.get('firstName')?.valid == false" >
+         Please Enter FirstName 
+     </span>
+  
+     <br>
     LastName :<input type="text" formControlName="lastName"/>  <br>
-    Email :<input type="text" formControlName="email"/>  <br>
+    Email :<input type="text" formControlName="email"/>  
+
+    <span class="error" *ngIf="myForm.get('email')?.touched && myForm.get('email')?.valid == false" >
+        <span  *ngIf="myForm.get('email')?.hasError('required') " >Please Enter Email</span>
+        <span *ngIf="myForm.get('email')?.hasError('email') ">Please Enter Valid Email</span> 
+    </span>
+ <br>
+
     Password : <input type="text" formControlName="password"/>  <br>
     ConfirmPassword : <input type="text" formControlName="confirmPassword"/>  <br>
 
