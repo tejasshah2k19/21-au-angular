@@ -15,6 +15,9 @@ import { ReactiveSignupFormComponent } from './reactive-signup-form/reactive-sig
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { ListProductComponent } from './components/list-product/list-product.component';
 import { EditProductComponent } from './components/edit-product/edit-product.component';
+import { AddUserComponent } from './components/add-user/add-user.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +30,8 @@ import { EditProductComponent } from './components/edit-product/edit-product.com
     ReactiveSignupFormComponent,
     AddProductComponent,
     ListProductComponent,
-    EditProductComponent
+    EditProductComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,9 @@ import { EditProductComponent } from './components/edit-product/edit-product.com
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    HttpClientModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

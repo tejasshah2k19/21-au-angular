@@ -1,0 +1,10 @@
+<p>Signup</p>
+
+<form [formGroup]="myForm" (ngSubmit)="saveUser()">
+ 
+Email	 : <input type="text" formControlName="email"><br> 
+FirstName	: <input type="text" formControlName="firstName"><br>
+Password	: <input type="text" formControlName="password"><br>
+<input type="submit" value="Signup"/> 
+
+</form>
