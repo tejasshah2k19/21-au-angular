@@ -16,6 +16,9 @@ export class UserService {
     return this.httpClient.post(this.url+"saveuser",user)
   }
 
+  authenticate(user:any):Observable<any>{
+    return this.httpClient.post(this.url+"authenticate",user)
+  }
 
 
 }

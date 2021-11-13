@@ -17,6 +17,8 @@ import { ListProductComponent } from './components/list-product/list-product.com
 import { EditProductComponent } from './components/edit-product/edit-product.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent as Login } from './components/login/login.component';
+import { ProductsComponent } from './components/products/products.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { HttpClientModule } from '@angular/common/http';
     AddProductComponent,
     ListProductComponent,
     EditProductComponent,
-    AddUserComponent
+    AddUserComponent,
+    Login,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,

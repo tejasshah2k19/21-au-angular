@@ -1,0 +1,46 @@
+<p>All Products</p>
+
+
+<div class="container">
+
+    <section class="grid grid-template-columns-1">
+        <div class="item" *ngFor="let p of products;let i=index">{{products[i].name}}<br>{{products[i].price}}<br>
+            <button (click)="addToCart(products[i].productId)" >AddToCart</button>
+        </div>
+    </section>
+    <!-- 
+    <div class="row" *ngFor="let p of products;let i=index">
+        <div class="col-md-3">
+            {{products[count].name}} <br>
+            {{products[count].qty}}<br>
+            {{products[count].price}}
+        </div>
+
+        <div class="col-md-3">
+            {{products[++count].name}} <br>
+            {{products[++count].qty}}<br>
+            {{products[++count].price}}
+        </div>
+
+
+        <div class="col-md-3">
+            {{products[++count].name}} <br>
+            {{products[++count].qty}}<br>
+            {{products[++count].price}}
+        </div>
+
+
+        <div class="col-md-3">
+            {{products[++count].name}} <br>
+            {{products[++count].qty}}<br>
+            {{products[++count].price}}
+        </div>
+    
+    
+     </div>-->
+
+
+
+
+
+</div>
