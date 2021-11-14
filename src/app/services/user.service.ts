@@ -17,6 +17,8 @@ export class UserService {
   }
 
   authenticate(user:any):Observable<any>{
+    console.log(user);
+    
     return this.httpClient.post(this.url+"authenticate",user)
   }
 

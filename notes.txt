@@ -80,3 +80,18 @@ custom modules
 FormControl ->state 
 
 
+----------------------------------------------------------------------------------
+
+observables - promises => both can use to deal with asynchronous function 
+
+promises has ability to deal with one async at a time, in constrast  observables can handle multiple async call. 
+
+observables                         vs                promise 
+
+multiple values can be render               single value at a time 
+you can cancel the call                     you can not cancle the call             
+subscribe and unsubscribe                   no support 
+we have , map , filter , reduce 
+        retry 
+subscribe() unsubscribe()                   then() 
+------------------------------------------------------------------------------

@@ -19,7 +19,10 @@ export class LoginComponent implements OnInit {
   authenticate() {
     let user = { "email": this.email, "password": this.password }
     this.userService.authenticate(user).subscribe(resp => {
+      console.log(resp);
+      
       if (resp.status == 200) {
+        localStorage.setItem("authToken",resp.data.authToken)
         alert("login done");
         this.router.navigateByUrl("/products")
       } else if (resp.status == -1) {
