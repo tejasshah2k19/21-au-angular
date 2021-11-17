@@ -95,3 +95,4 @@ we have , map , filter , reduce
         retry 
 subscribe() unsubscribe()                   then() 
 ------------------------------------------------------------------------------
+ 

@@ -1,1 +1,19 @@
-<p>my-cart works!</p>
+<h2>MyCart</h2>
+
+
+<table border="1">
+    <tr>
+        <td>ProductName</td>
+        <td>Price</td>
+        <td>Qty</td>
+        <td>Total</td>
+    </tr>
+
+    <tr *ngFor="let p of myCarts">
+        <td>{{p}}</td>
+        <td>{{p}}</td>
+        <td>qty</td>
+        <td>qty*price</td>
+    </tr>
+
+</table>

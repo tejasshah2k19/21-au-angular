@@ -14,7 +14,7 @@ export class EditProductComponent implements OnInit {
 
 
 
-  product: Product = { productId: 0, price: 0, productName: "" }
+  product: Product = { productId: 0, price: 0, productName: "",name:"" }
   ngOnInit(): void {
     this.product.productId = this.activatedRoute.snapshot.params.productId
     // this.productService.products.filter(product=>product.productId)

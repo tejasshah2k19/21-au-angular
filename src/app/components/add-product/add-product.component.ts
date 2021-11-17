@@ -26,7 +26,7 @@ export class AddProductComponent implements OnInit {
 
   saveProduct(){
     this.productId = parseInt((Math.random()* 1000000)+"")//121212
-    let product:Product = {productId:this.productId,price:this.price,productName:this.productName}
+    let product:Product = {productId:this.productId,price:this.price,name:"",productName:this.productName}
     this.productService.products.push(product);    
     this.router.navigateByUrl("list-product")
   }
