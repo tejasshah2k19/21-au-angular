@@ -1,6 +1,6 @@
 export interface Cart {
     productId:number
-    cartId:number
+    cartId:Array<number>
     userId:number
     name:string 
     price:number 

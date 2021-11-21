@@ -17,4 +17,8 @@ export class CartService {
   myCart(authToken:string):Observable<any>{
     return this.httpClient.get(environment.api_url+"carts/"+authToken)
   }
+
+  removeCart(cartId:number):Observable<any>{
+    return this.httpClient.delete(environment.api_url+"carts/"+cartId)
+  }
 }

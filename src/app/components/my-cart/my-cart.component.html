@@ -1,19 +1,22 @@
 <h2>MyCart</h2>
 
 
-<table border="1">
+<table border="1" *ngIf="myCarts">
     <tr>
         <td>ProductName</td>
         <td>Price</td>
         <td>Qty</td>
         <td>Total</td>
+        <td>RemoveQty</td>
     </tr>
 
-    <tr *ngFor="let p of myCarts">
-        <td>{{p}}</td>
-        <td>{{p}}</td>
-        <td>qty</td>
-        <td>qty*price</td>
+    <tr *ngFor="let p of myCarts|keyvalue">
+         
+        <td>{{p.value.name}}</td>
+        <td>{{p.value.price}}</td>
+        <td>{{p.value.qty}}</td>
+        <td>{{p.value.qty * p.value.price}}</td>
+        <td>  <button (click)="removeQty(p.value.cartId[0])"  >Remove</button>  </td>
     </tr>
 
 </table>
