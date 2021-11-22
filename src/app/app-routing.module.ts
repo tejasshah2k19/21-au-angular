@@ -6,26 +6,33 @@ import { AddUserComponent } from './components/add-user/add-user.component';
 import { EditProductComponent } from './components/edit-product/edit-product.component';
 import { ListProductComponent } from './components/list-product/list-product.component';
 import { LoginComponent } from './login/login.component';
-import { LoginComponent  as Login } from './components/login/login.component';
+import { LoginComponent as Login } from './components/login/login.component';
 
 import { ReactiveSignupFormComponent } from './reactive-signup-form/reactive-signup-form.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProductsComponent } from './components/products/products.component';
 import { MyCartComponent } from './components/my-cart/my-cart.component';
+import { LoginGuard } from './guard/login.guard';
+import { UserComponent } from './components/user/user.component';
 
 const routes: Routes = [
-  {path:"signup",component:SignupComponent},
-  {path:"login",component:LoginComponent},
-  {path:"calc",component:CalcComponent},
-  {path:"reactive-signup",component:ReactiveSignupFormComponent},
-  {path:"add-product",component:AddProductComponent},
-  {path:"list-product",component:ListProductComponent},
-  {path:"edit-product/:productId",component:EditProductComponent},
-  {path:"ecom-signup",component:AddUserComponent},
-  {path:"ecom-login",component:Login},
-  {path:"products",component:ProductsComponent},
-  {path:"mycart",component:MyCartComponent}
-
+  { path: "signup", component: SignupComponent },
+  { path: "login", component: LoginComponent },
+  { path: "calc", component: CalcComponent },
+  { path: "reactive-signup", component: ReactiveSignupFormComponent },
+  { path: "add-product", component: AddProductComponent },
+  { path: "list-product", component: ListProductComponent },
+  { path: "edit-product/:productId", component: EditProductComponent },
+  { path: "ecom-signup", component: AddUserComponent },
+  { path: "ecom-login", component: Login },
+  {
+    path: "user", component: UserComponent, children:
+      [
+        { path: "products", component: ProductsComponent },
+        { path: "mycart", component: MyCartComponent },
+      ],
+    canActivate: [LoginGuard]
+  }
   // {path:"edituser/:userId",component:EditUserComponent}
 
 

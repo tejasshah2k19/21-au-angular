@@ -85,7 +85,7 @@ export class MyCartComponent implements OnInit {
               v.qty = v.qty - 1
             }
           }
-
+          
         });
          console.log("after remove => ", this.myCarts);
 

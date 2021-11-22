@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent as Login } from './components/login/login.component';
 import { ProductsComponent } from './components/products/products.component';
 import { MyCartComponent } from './components/my-cart/my-cart.component';
+import { UserComponent } from './components/user/user.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { MyCartComponent } from './components/my-cart/my-cart.component';
     AddUserComponent,
     Login,
     ProductsComponent,
-    MyCartComponent
+    MyCartComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

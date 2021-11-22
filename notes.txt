@@ -95,4 +95,12 @@ we have , map , filter , reduce
         retry 
 subscribe() unsubscribe()                   then() 
 ------------------------------------------------------------------------------
- 
+ adv java --> filter 
+                --> guard 
+
+
+                incoming request --> pre process 
+                        login 
+                        ip 
+                        geo 
+                        
