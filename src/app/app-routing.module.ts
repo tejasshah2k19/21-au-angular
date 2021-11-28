@@ -14,6 +14,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { MyCartComponent } from './components/my-cart/my-cart.component';
 import { LoginGuard } from './guard/login.guard';
 import { UserComponent } from './components/user/user.component';
+import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 
 const routes: Routes = [
   { path: "signup", component: SignupComponent },
@@ -32,7 +33,8 @@ const routes: Routes = [
         { path: "mycart", component: MyCartComponent },
       ],
     canActivate: [LoginGuard]
-  }
+  },
+  {path:"pipe",component:PipeDemoComponent}
   // {path:"edituser/:userId",component:EditUserComponent}
 
 

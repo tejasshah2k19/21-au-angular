@@ -4,7 +4,7 @@
 <div class="container">
 
     <section class="grid grid-template-columns-1">
-        <div class="item" *ngFor="let p of products;let i=index">{{products[i].name}}<br>{{products[i].price}}<br>
+        <div class="item" *ngFor="let p of products;let i=index">{{products[i].name}}<br>{{products[i].price | currency }}<br>
             <button (click)="addToCart(products[i].productId)" >AddToCart</button>
         </div>
     </section>

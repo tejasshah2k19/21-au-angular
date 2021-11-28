@@ -103,4 +103,50 @@ subscribe() unsubscribe()                   then()
                         login 
                         ip 
                         geo 
-                        
+------------------------------------------------------------------------------
+decimalPipe 
+number pipe 
+{{ 454.78787814 | number: '3.4-4' }} => 
+
+454.7879 <br>
+
+{{3.3456423 | number: '1.0-3'}} =>
+3.346
+<br>
+{{3.3456423 | number: '3.0-2'}} =>
+
+003.34
+<br>
+{{3.3456423 | number: '1.0-0'}}
+3
+<br>
+
+-----------------
+
+localstorage
+cookie
+sessionstorage 
+
+behaviour-subject 
+
+promise - async await -bs 
+
+
+
+----------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

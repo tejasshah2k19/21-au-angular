@@ -9,10 +9,12 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  //@Autowired 
+  //ProductService productService 
 
-  constructor(private productService: ProductService,private cartService:CartService) { }
+  constructor(private productService: ProductService, private cartService: CartService) { }
 
-  count:number=0
+  count: number = 0
   products: Array<Apiproduct> = []
   ngOnInit(): void {
     this.productService.getAllProducts().subscribe(resp => {
@@ -20,21 +22,30 @@ export class ProductsComponent implements OnInit {
         this.products = resp.data
       }
     })
+    this.myAllProducts2()
   }
 
 
-  addToCart(productId:number){
+  async myAllProducts2() {
+
+    let data = await this.productService.getAllProducts() // 
+    console.log(data);
+
+  }
+
+
+  addToCart(productId: number) {
     console.log(productId);
     let authToken = localStorage.getItem("authToken")
-    let cart = {"authToken":authToken,"productId":productId}
-    this.cartService.addToCart(cart).subscribe(resp=>{
-      if(resp.status == -1 ){
+    let cart = { "authToken": authToken, "productId": productId }
+    this.cartService.addToCart(cart).subscribe(resp => {
+      if (resp.status == -1) {
         alert(resp.msg)
-      }else{
+      } else {
         alert(resp.msg)
       }
     })
-    
+
 
   }
 }

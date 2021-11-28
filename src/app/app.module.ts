@@ -21,6 +21,8 @@ import { LoginComponent as Login } from './components/login/login.component';
 import { ProductsComponent } from './components/products/products.component';
 import { MyCartComponent } from './components/my-cart/my-cart.component';
 import { UserComponent } from './components/user/user.component';
+import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
+import { CurrpipePipe } from './currpipe.pipe';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { UserComponent } from './components/user/user.component';
     Login,
     ProductsComponent,
     MyCartComponent,
-    UserComponent
+    UserComponent,
+    PipeDemoComponent,
+    CurrpipePipe
   ],
   imports: [
     BrowserModule,

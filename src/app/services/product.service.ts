@@ -27,6 +27,17 @@ export class ProductService {
     return this.htppClient.get(environment.api_url + "products")
   }
 
+  getAllProducts2():Promise<any>{
+    //return this.htppClient.get(environment.api_url+"products").toPromise()
+    return new Promise((res,rej)=>{
+       this.htppClient.get(environment.api_url+"products").subscribe(resp=>{
+        res(resp)  
+       },err=>{
+         rej(err)
+       })
+    })
+
+  }
   getProductById(productId:number):Observable<any>{
     return this.htppClient.get(environment.api_url+"products/"+productId)
   }
