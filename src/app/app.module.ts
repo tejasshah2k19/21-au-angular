@@ -23,6 +23,7 @@ import { MyCartComponent } from './components/my-cart/my-cart.component';
 import { UserComponent } from './components/user/user.component';
 import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 import { CurrpipePipe } from './currpipe.pipe';
+import { AttributeBindingComponent } from './attribute-binding/attribute-binding.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { CurrpipePipe } from './currpipe.pipe';
     MyCartComponent,
     UserComponent,
     PipeDemoComponent,
-    CurrpipePipe
+    CurrpipePipe,
+    AttributeBindingComponent
   ],
   imports: [
     BrowserModule,
